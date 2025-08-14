@@ -81,7 +81,14 @@
     pnpm start request-indexing "https://your-tistory-blog.tistory.com/entry/your-post-url"
     ```
 
+4.  **RSS 기반 자동 인덱싱 요청**
+    ```bash
+    pnpm start auto-index
+    ```
+    - 블로그의 RSS 피드에서 모든 포스트 URL을 읽어 자동으로 Google에 인덱싱 요청을 보냅니다.
+
 ## 스크립트
 
 - `pnpm start`: `ts-node`를 사용하여 개발 환경에서 CLI를 실행합니다.
 - `pnpm build`: `tsc`를 사용하여 `src` 디렉토리의 타입스크립트 코드를 `dist` 디렉토리에 JavaScript 코드로 컴파일합니다.
+- `pnpm start auto-index`: 블로그 RSS에서 포스트를 읽어 자동 인덱싱 요청을 실행합니다.

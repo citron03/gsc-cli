@@ -4,6 +4,7 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 import { authenticate, getAuthenticatedClient } from './auth';
 import { inspectUrl, requestIndexing } from './gsc';
+import { autoIndexFromRss } from './auto-index';
 
 const program = new Command();
 
@@ -61,6 +62,17 @@ program
       await requestIndexing(auth, url);
     } catch (error) {
       console.error('Error requesting indexing:', error);
+    }
+  });
+
+program
+  .command('auto-index')
+  .description('블로그 RSS에서 모든 포스트를 읽어 자동으로 인덱싱 요청을 보냅니다')
+  .action(async () => {
+    try {
+      await autoIndexFromRss();
+    } catch (error) {
+      console.error('자동 인덱싱 요청 실패:', error);
     }
   });
 

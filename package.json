@@ -1,7 +1,7 @@
 {
   "name": "google-seo-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tistory 블로그 Google SEO 관리 CLI 도구",
   "main": "dist/index.js",
   "bin": {
     "gsc-cli": "dist/index.js"
@@ -11,7 +11,14 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "google",
+    "seo",
+    "tistory",
+    "cli",
+    "search-console",
+    "indexing"
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.12.4",
@@ -20,11 +27,14 @@
     "express": "^5.1.0",
     "google-auth-library": "^10.2.1",
     "googleapis": "^155.0.1",
-    "open": "^10.2.0"
+    "node-fetch": "^3.3.2",
+    "open": "^10.2.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.2.1",
+    "@types/xml2js": "^0.4.14",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }
