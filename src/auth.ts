@@ -10,7 +10,10 @@ import { Config, Credentials } from './types';
 const CONFIG_PATH = path.join(process.cwd(), 'config.json');
 const CREDENTIALS_PATH = path.join(process.cwd(), 'credentials.json');
 
-const SCOPES = ['https://www.googleapis.com/auth/webmasters'];
+const SCOPES = [
+  'https://www.googleapis.com/auth/webmasters',
+  'https://www.googleapis.com/auth/indexing'
+];
 
 // Helper function to read config
 async function readConfig(): Promise<Config> {
