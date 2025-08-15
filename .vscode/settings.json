@@ -1,0 +1,41 @@
+{
+  // GitHub Copilot 커밋 메시지 가이드라인 파일 지정
+  "github.copilot.commitGuidelines": ".github/COPILOT_COMMIT_GUIDELINES.md",
+  "github.copilot.commitGuidelines.enforce": true,
+  // Copilot 자동 완성 관련 설정
+  "github.copilot.enable": {
+    "": true
+  },
+  "github.copilot.inlineSuggest.enable": true,
+  "github.copilot.suggestionDelayMs": 0,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.advanced": {
+    "inlineSuggestCount": 3
+  },
+  // Copilot Chat 패널 관련 설정
+  "github.copilot.chat.enable": true,
+  "github.copilot.chat.showWelcomeNotification": false,
+  "github.copilot.chat.experimentalPanel": true,
+  // Copilot 프롬프트 개선
+  "github.copilot.prompt.experimental.enableV2": true,
+
+  // 추천 VSCode 설정
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+  "source.fixAll": "always"
+  },
+  "files.exclude": {
+    "node_modules": true,
+    "web/node_modules": true,
+    "**/.DS_Store": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.enable": true
+}
