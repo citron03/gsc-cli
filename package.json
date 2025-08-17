@@ -10,7 +10,8 @@
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gui": "pnpm --filter web dev"
+    "gui": "pnpm --filter web dev",
+    "start:server": "ts-node src/server.ts"
   },
   "keywords": [
     "google",

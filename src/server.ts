@@ -10,7 +10,7 @@ app.post('/api/auth', async (req, res) => {
   try {
     await authenticate();
     res.json({ success: true });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 });
@@ -22,7 +22,7 @@ app.post('/api/inspect', async (req, res) => {
     // 실제 결과를 반환하도록 수정 필요
     await inspectUrl(auth, url);
     res.json({ success: true });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 });
@@ -33,7 +33,7 @@ app.post('/api/request-indexing', async (req, res) => {
     const auth = await getAuthenticatedClient();
     await requestIndexing(auth, url);
     res.json({ success: true });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 });
@@ -42,7 +42,7 @@ app.post('/api/auto-index', async (req, res) => {
   try {
     await autoIndexFromRss();
     res.json({ success: true });
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 });
